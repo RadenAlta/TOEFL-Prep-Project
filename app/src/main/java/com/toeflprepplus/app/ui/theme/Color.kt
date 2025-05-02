@@ -1,4 +1,4 @@
-package com.toeflprepplus.app.ui.theme
+package com.toeflprepplus.app.theme
 
 import androidx.compose.ui.graphics.Color
 
