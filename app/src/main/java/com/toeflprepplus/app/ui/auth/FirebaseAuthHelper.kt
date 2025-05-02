@@ -1,4 +1,4 @@
-package com.toeflprepplus.app.auth
+package com.toeflprepplus.app.ui.auth
 
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser

@@ -1,4 +1,31 @@
-<?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<preferences xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceScreen
+        android:key="settings_screen"
+        android:title="Settings"
+        android:summary="App preferences">
 
-</PreferenceScreen>
+        <!-- Theme preference -->
+        <SwitchPreferenceCompat
+            android:key="pref_theme"
+            android:title="Dark Mode"
+            android:summary="Enable dark mode"
+            android:defaultValue="false" />
+
+        <!-- Sound preference -->
+        <SwitchPreferenceCompat
+            android:key="pref_sound"
+            android:title="Enable Sound"
+            android:summary="Enable sound for notifications"
+            android:defaultValue="true" />
+
+        <!-- Language preference -->
+        <ListPreference
+            android:key="pref_language"
+            android:title="Language"
+            android:summary="Select your preferred language"
+            android:defaultValue="en"
+            android:entries="@array/language_entries"
+            android:entryValues="@array/language_values" />
+
+    </PreferenceScreen>
+</preferences>

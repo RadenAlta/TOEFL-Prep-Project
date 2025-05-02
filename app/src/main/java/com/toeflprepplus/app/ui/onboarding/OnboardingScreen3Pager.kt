@@ -10,13 +10,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.toeflprepplus.app.R
 
 @Composable
-fun OnboardingScreen3() {
+fun OnboardingScreen3Pager(navController: NavController) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -54,20 +54,18 @@ fun OnboardingScreen3() {
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
-            Button(onClick = { /* Navigate to SignUp */ }) {
+            Button(onClick = {
+                navController.navigate("signup")
+            }) {
                 Text("Sign up")
             }
-            OutlinedButton(onClick = { /* Navigate to Login */ }) {
+            OutlinedButton(onClick = {
+                navController.navigate("login")
+            }) {
                 Text("Log in")
             }
         }
 
         Spacer(modifier = Modifier.height(32.dp))
     }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun OnboardingScreen3Preview() {
-    OnboardingScreen3()
 }

@@ -2,19 +2,19 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    id("com.google.gms.google-services")
 }
 
 android {
     namespace = "com.toeflprepplus.app"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.toeflprepplus.app"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -27,28 +27,57 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+
     kotlinOptions {
         jvmTarget = "11"
     }
+
     buildFeatures {
         compose = true
     }
 }
 
 dependencies {
-
+    // Core AndroidX libraries
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
+
+    // Jetpack Compose dependencies
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+
+    // Material Icons
+    implementation(libs.androidx.material.icons.extended)
+
+    // Firebase dependencies
+    implementation("com.google.firebase:firebase-auth:23.2.0")
+    implementation("com.google.firebase:firebase-auth-ktx:23.2.0")
+    implementation("com.google.firebase:firebase-firestore:25.1.4")
+    implementation("com.google.firebase:firebase-analytics-ktx:22.4.0")
+    implementation(platform("com.google.firebase:firebase-bom:33.13.0"))
+
+    // Google Play services for authentication
+    implementation("com.google.android.gms:play-services-auth:21.3.0")
+
+    // Navigation
+    implementation(libs.androidx.navigation.runtime.ktx)
+    implementation(libs.androidx.navigation.compose)
+
+    // Accompanist Pager
+    implementation("com.google.accompanist:accompanist-pager:0.31.4-beta")
+    implementation("com.google.accompanist:accompanist-pager-indicators:0.31.4-beta")
+    implementation(libs.androidx.preference.ktx)
+
+    // Testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

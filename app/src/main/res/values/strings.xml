@@ -1,3 +1,39 @@
 <resources>
+    <!-- App Name -->
     <string name="app_name">TOEFLPrep+</string>
+
+    <!-- Button Labels -->
+    <string name="start_quiz_button">Start Quiz</string>
+    <string name="submit_answer_button">Submit Answer</string>
+    <string name="retry_quiz_button">Retry Quiz</string>
+
+    <!-- Preferences -->
+    <string name="pref_language">Language</string>
+    <string name="pref_theme">Dark Mode</string>
+    <string name="pref_sound">Enable Sound</string>
+
+    <!-- Labels -->
+    <string name="quiz_title">Quiz Title</string>
+    <string name="question_label">Question</string>
+    <string name="question_options">Options</string>
+
+    <!-- Error Messages -->
+    <string name="incorrect_answer">Incorrect Answer. Try Again!</string>
+    <string name="correct_answer">Correct Answer!</string>
+    <string name="empty_input_error">Please fill in the required fields.</string>
+
+    <!-- Settings -->
+    <string name="settings_screen_title">Settings</string>
+    <string name="settings_screen_summary">App Preferences</string>
+
+    <!-- Confirmation -->
+    <string name="confirm_action">Are you sure you want to continue?</string>
+
+    <!-- Help and Info -->
+    <string name="help_section">Help</string>
+    <string name="contact_support">Contact Support</string>
+
+    <!-- Toast Messages -->
+    <string name="toast_starting_quiz">Starting Quiz...</string>
+    <string name="toast_no_internet">No internet connection</string>
 </resources>
