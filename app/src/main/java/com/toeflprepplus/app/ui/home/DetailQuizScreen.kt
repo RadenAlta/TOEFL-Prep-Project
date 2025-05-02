@@ -86,7 +86,7 @@ fun DetailQuizScreen(
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
             Text(text = "$numberOfQuestions Questions", fontSize = 16.sp, color = Color.Gray)
-            Text(text = "$duration", fontSize = 16.sp, color = Color.Gray)
+            Text(text = "$duration", fonstaufiktSize = 16.sp, color = Color.Gray)
             Row(
                 verticalAlignment = Alignment.CenterVertically
             ) {
